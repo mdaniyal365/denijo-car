@@ -1,12 +1,13 @@
-import Footer from "./layout/footer"
-import Header from "./layout/header"
+
+import Home from "./pages/Home"
 
 function App() {
  
 
   return (
     <>
-  
+    <Home/>
+    f
     </>
     
   )
