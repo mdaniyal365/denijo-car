@@ -1,14 +1,21 @@
-import React from 'react'
+import React from "react";
+import myImage from "../assets/carpool_only_large.jpg";
 
 function Home() {
   return (
-    <div>
-      <div  style={{ backgroundImage: `url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/bf/0b/07/caption.jpg?w=1200&h=-1&s=1)` }}>
+    <>
+      <div>
+        <div className="img ">
+        <img src={myImage} alt="" className="" />
+        </div>
         
+        <div className="tex flex justify-center -m-64 text-5xl font-bold  text-white">
+
+        Your pick of rides at low prices
+        </div>
       </div>
-      <img src="" alt="" />
-    </div>
-  )
+    </>
+  );
 }
 
-export default Home
+export default Home;
