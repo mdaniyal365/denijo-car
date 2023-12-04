@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const SuggestionsInput = () => {
   const [value, setValue] = useState('');
-  const [open,isOpen]=useState(false)
+//   const [open,isOpen]=useState(false)
   const [showDropdown, setShowDropdown] = useState(false);
   const suggestions = ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Ahmedabad', 'Chennai', 'Kolkata', 'Surat', 'Pune', 'Jaipur'];
   
@@ -17,7 +17,7 @@ const SuggestionsInput = () => {
   };
   const rewst =(suggestion)=>{
     setValue(suggestion)
-    isOpen(!open)
+   
   }
 
   return (
