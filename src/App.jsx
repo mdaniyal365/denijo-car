@@ -1,25 +1,20 @@
-
-import Calendar_item from "./layout/Calendar"
-import AddTrip from "./pages/AddTrip"
-import SuggestionsInput from "./pages/City"
-import Home from "./pages/Home"
-
+import Header from "./layout/Header"
+import Footer from "./layout/Footer"
+import { Outlet } from "react-router-dom"
 
 function App() {
  
 
   return (
-    <>
-    
-    {/* <Home/> */}
-     <AddTrip/>
-    
-   <Calendar_item/>
-   <SuggestionsInput/>
-   
-    
-    </>
-    
+    <div className='min-h-screen flex flex-wrap content-between'>
+    <div className='w-full block'>
+      <Header/>
+      <main>
+      <Outlet />
+      </main>
+      <Footer />
+    </div>
+  </div>
   )
 }
 

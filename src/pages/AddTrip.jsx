@@ -12,7 +12,7 @@ import { SlLocationPin } from "react-icons/sl";
 
 function AddTrip() {
     const [startDate, setStartDate] = useState(new Date());
-    const [passegers,setPassegers]=useState(0);
+    const [passegers,setPassegers]=useState(1);
   return (
     <>
       <div className=" bg-blue-900 h-64 w-[100%] text flex justify-center text-3xl text-white font-bold text-center">
