@@ -8,7 +8,7 @@ import { SlLocationPin } from "react-icons/sl";
 function Home() {
   return (
     <>
-      <div className=" bg-blue-900 h-64 w-[100%] text flex justify-center text-3xl text-white font-bold text-center">
+       <div className=" bg-blue-900 h-64 w-[100%] text flex justify-center text-3xl text-white font-bold text-center">
         <div className="m-8"> Your pick of rides at low prices</div>
       </div>
 
@@ -40,21 +40,26 @@ function Home() {
               <span className="mt-2 p-2">
                 <MdOutlineDateRange />
               </span>
-              <input
-                type="text"
-                placeholder="Leaving from..."
-                className="  p-1 h-12 w-[100%] "
-              />
+              <div className="">
+        
+          
+          <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className="  p-1 h-12 w-[100%] "/>
+        
+      </div>
 
               <div className="from flex ">
                 <span className="mt-2 p-2">
                   <IoPersonOutline />
                 </span>
-                <input
-                  type="text"
-                  placeholder="Leaving from..."
-                  className="  p-1 h-12 w-[100%] "
-                />
+               <div className=" passegers p-1 h-12 w-[100%]  space-x-5">
+                  <span onClick={()=>passegers<=1?"":setPassegers(passegers-1)} className=" font-semibold text-2xl ">
+                    -
+                  </span>
+                  <span className="font-semibold text-2xl"> {passegers}</span>
+                 
+                  <span onClick={()=>passegers>=4?"":setPassegers(passegers+1)} className=" font-semibold text-2xl">+</span>
+           
+               </div>
               </div>
             </div>
 
@@ -63,7 +68,7 @@ function Home() {
                 type="submit"
                 className=" mt-2 text-2xl text-white font-medium"
               >
-                search
+                Add Trip
               </button>
             </div>
           </div>
